@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Behind The Nineties";
+  src: url("./fonts/ITALIC/Behind-The-Nineties-Bd-It.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Behind The Nineties";
+  src: url("./fonts/ITALIC/Behind-The-Nineties-It.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Behind The Nineties";
+  src: url("./fonts/UPRIGHT/Behind-The-Nineties-Bd.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Behind The Nineties";
+  src: url("./fonts/UPRIGHT/Behind-The-Nineties-Md.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Add more @font-face rules if needed */
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: "Behind The Nineties", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
