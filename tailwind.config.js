@@ -19,7 +19,7 @@ export default {
       },
       animation: {
         gradientShift: "gradientShift 6s ease infinite",
-        autoScroll: "autoScroll 60s linear infinite"
+        autoScroll: "autoScroll 120s linear infinite"
       }
     }
   },

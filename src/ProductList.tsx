@@ -358,9 +358,9 @@ const ProductList: React.FC = () => {
   ];
 
   return (
-    <div className="w-[100vw] h-[100vh] bg-gradient-to-br from-blue-900 to-gray-800 bg-[400%] animate-gradientShift p-6">
+    <div className="w-[100vw] h-[100vh] bg-gradient-to-br from-blue-900 to-gray-800 bg-[400%] animate-gradientShift p-6 ">
       {" "}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 font-behind-the-nineties text-5xl ">
         {/* Flower Section */}
         <ProductSection title="Flower" products={flowers} />
 
@@ -384,17 +384,16 @@ interface ProductSectionProps {
 
 const ProductSection: React.FC<ProductSectionProps> = ({ title, products }) => (
   <div className="flex flex-col items-center h-full hide-scrollbar overflow-hidden">
-    <h2 className="text-[2%] md:text-[1.5vw] xl:text-[1.2vw] font-bold text-white mb-2 hide-scrollbar">
+    <h2 className="text-xl md:text-2xl xl:text-3xl font-bold text-gray-800 mb-4 p-4 bg-white rounded-lg shadow-md">
       {title}
     </h2>
     <div className="w-full bg-gray-100 bg-opacity-20 rounded-lg p-4 border border-gray-300 shadow-lg h-full overflow-hidden relative hide-scrollbar">
-      {" "}
       <div className="space-y-4 animate-autoScroll">
         {[...products, ...products].map((product, index) => (
           <div
             key={index}
-            className="flex items-center justify-between py-4 px-4 rounded-lg bg-white shadow-md hover:bg-gray-100 transition-colors ">
-            {/* Product content here */}
+            className="flex items-center justify-between py-4 px-4 rounded-lg bg-white shadow-md hover:bg-gray-100 transition-colors"
+          >
             <div className="flex items-center gap-4">
               <img
                 src={product.image}
@@ -412,9 +411,10 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, products }) => (
                         : product.type === "INDICA"
                         ? "bg-purple-100 text-purple-600"
                         : product.type === "NONE"
-                        ? "bg-gray-200 text-gray-500" // styling for "NONE"
+                        ? "bg-gray-200 text-gray-500"
                         : ""
-                    }`}>
+                    }`}
+                  >
                     {product.type}
                   </span>
 
@@ -436,5 +436,8 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, products }) => (
     </div>
   </div>
 );
+
+
+
 
 export default ProductList;
